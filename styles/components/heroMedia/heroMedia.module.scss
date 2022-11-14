@@ -1,0 +1,101 @@
+@import "../../mixins";
+@import "../../variables";
+
+.section {
+  position: relative;
+}
+
+[class^="section"].topLevelPageHeroMedia {
+  padding-bottom: 205px;
+  position: relative;
+}
+
+.heroMedia {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vw * (9 / 16));
+  justify-content: center;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+
+  .imageWrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    width: $hero-media-width;
+    z-index: 0;
+
+    .landscapeImage {
+      height: 100%;
+      width: auto;
+    }
+
+    .portraitImage {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.heroContentWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .postTitle,
+  .postSubtitle {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .postTitle {
+    h1 {
+      font-size: 3.157rem;
+      @include tablet {
+        font-size: 2.441rem;
+      }
+      @include mobile {
+        font-size: 2.074rem;
+      }
+    }
+  }
+
+  .postSubtitle {
+    h5 {
+      // font-size: 24px;
+      font-weight: 600;
+    }
+  }
+}
+
+.topLevelPageContentWrapper {
+  bottom: 0;
+  padding-left: $hero-content-left-position;
+  padding-right: $hero-content-left-position;
+  position: absolute;
+  width: 100%;
+
+  .pageDisplayTitle {
+    position: relative;
+    z-index: 1;
+  }
+
+  .shortDescription {
+    max-width: 500px;
+    width: 100%;
+    @include short-description;
+  }
+}

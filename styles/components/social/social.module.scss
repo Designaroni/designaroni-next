@@ -1,0 +1,18 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+.social {
+  .icon {
+    color: $mountain-sage;
+    font-size: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    min-height: 25px;
+    transition: color 300ms $swing;
+
+    &:hover {
+      color: $sand-dune;
+    }
+  }
+}

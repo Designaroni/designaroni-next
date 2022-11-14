@@ -1,0 +1,27 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+a.parent {
+  position: relative;
+
+  .svg {
+    bottom: 0;
+    fill: $primary-font-color;
+    left: 0;
+    position: absolute;
+  }
+
+  &:not(.active) {
+    .svg {
+      width: calc(100% - 30px);
+    }
+  }
+
+  &:last-of-type {
+    .svg,
+    .motionSvg {
+      width: 100%;
+    }
+  }
+}

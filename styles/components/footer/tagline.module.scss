@@ -1,0 +1,11 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+.tagline {
+  background-color: $tagline-background-color;
+  margin-top: 7px;
+  min-height: 80px;
+  padding: 0 $page-gutter-half;
+  @include text;
+}

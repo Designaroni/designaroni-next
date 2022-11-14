@@ -1,0 +1,48 @@
+@import "../../variables";
+
+.section {
+  margin: 50px 0;
+  max-width: 1440px;
+  padding-left: $page-gutter;
+  padding-right: $page-gutter;
+  width: 100%;
+
+  &.fullWidth {
+    margin: initial;
+    max-width: initial;
+    padding: initial;
+    width: 100%;
+  }
+
+  &.fullWidthCenter {
+    display: flex;
+    justify-content: center;
+    max-width: initial;
+    width: 100%;
+  }
+
+  &.center {
+    display: flex;
+    justify-content: center;
+  }
+
+  &.columnAlignItemsEnd {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.pageTitle {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // fixes bug with hr elements shrinking inside section containers
+    hr {
+      align-self: normal;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,230 @@
+@import "./variables";
+
+// typography based on https://type-scale.com/
+// Default viewport uses 1.333 – Perfect Fourth at base 16
+// tablet uses 1.250 – Major Third at base 16
+// mobile uses ???
+// other typography basics aquirred from ???
+
+// typography mixins
+@mixin h1 {
+  font-size: 4.209rem;
+  @include tablet {
+    font-size: 3.052rem;
+  }
+  @include mobile {
+    font-size: 2.488rem;
+  }
+}
+
+@mixin h2 {
+  font-size: 3.157rem;
+  @include tablet {
+    font-size: 2.441rem;
+  }
+  @include mobile {
+    font-size: 2.074rem;
+  }
+}
+
+@mixin h3 {
+  font-size: 2.369rem;
+  @include tablet {
+    font-size: 1.953rem;
+  }
+  @include mobile {
+    font-size: 1.728rem;
+  }
+}
+
+@mixin h4 {
+  font-size: 1.777rem;
+  @include tablet {
+    font-size: 1.563rem;
+  }
+  @include mobile {
+    font-size: 1.44rem;
+  }
+}
+
+@mixin h5 {
+  font-size: 1.333rem;
+  @include tablet {
+    font-size: 1.25rem;
+  }
+  @include mobile {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin large-paragraph {
+  font-size: 1.333rem;
+  font-weight: 300;
+  @include tablet {
+    font-size: 1.25rem;
+  }
+  @include mobile {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin h6 {
+  font-size: 1rem;
+}
+
+@mixin paragraph {
+  font-size: 1rem;
+}
+
+// uses 1.125 Major Second in 2nths going down from 9.373
+@mixin top-level-page-display-title {
+  color: $sand-dune;
+  font-size: 9.373rem; // ~149.97
+  font-weight: 600;
+  @include tablet {
+    font-size: 7.406rem; // ~118.50
+  }
+  @include mobile {
+    font-size: 5.852rem; // ~93.63
+  }
+}
+
+// uses 1.500 – Perfect Fifth and a custom 1.375
+@mixin motion-latest-post-ticker-link {
+  font-size: 2.25rem; // ~36px
+  font-weight: 500;
+  @include tablet {
+    font-size: 1.5rem; // ~24px
+  }
+  @include mobile {
+    font-size: 1.375rem; // ~22px
+  }
+}
+
+// uses 1.250 – Major Third
+@mixin motion-categories-ticker-link {
+  font-size: 3.052rem; // ~48.83px
+  font-weight: 800;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include tablet {
+    font-size: 2.441rem; // ~39.06px
+  }
+  @include mobile {
+    font-size: 1.953rem; // ~31.25px
+  }
+}
+
+@mixin link-styles {
+  a {
+    transition: color 300ms $swing;
+
+    &:hover {
+      color: $primary-font-color;
+    }
+  }
+}
+
+@mixin text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@mixin title {
+  color: $sand-dune;
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 0;
+}
+
+// uses 1.414 – Augmented Fourth
+@mixin title-large {
+  font-size: 3.998rem; // ~63.96px
+  font-weight: 600;
+  @include tablet {
+    font-size: 2.827rem; // ~45.23px
+  }
+  @include mobile {
+    font-size: 1.999rem; // ~31.99px
+  }
+}
+
+@mixin short-description {
+  color: $sand-dune;
+}
+
+@mixin short-description-centered {
+  text-align: center;
+  width: 80%;
+}
+
+@mixin short-description-class {
+  .shortDescription {
+    @include short-description-centered;
+    @include short-description;
+  }
+}
+@mixin related-posts {
+  color: $sand-dune;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+
+  a {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+}
+
+@mixin navigation {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+
+  a {
+    color: $secondary-font-color;
+    display: inline-block;
+    height: 25px;
+
+    &.active {
+      color: $primary-font-color;
+    }
+  }
+}
+
+// rename small, medium, large
+@mixin mobile {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+// name something better to signify when mobile experience starts to be displayed
+@mixin is-mobile {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin featured-pages-column {
+  @media only screen and (max-width: 1360px) {
+    @content;
+  }
+}

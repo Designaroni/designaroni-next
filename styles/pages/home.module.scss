@@ -1,0 +1,30 @@
+@import "../variables";
+@import "../mixins";
+
+// .pageTitle {
+
+// }
+
+@include short-description-class;
+
+.socialMediaLinks {
+  line-height: 0;
+
+  svg {
+    height: 38px;
+    width: 38px;
+  }
+}
+
+// .topLevelPageLinks {
+
+// }
+
+// .latestPostTicker {
+
+// }
+
+// or .categoriesScroller? ticker but also gesture draggable?
+// .categoriesTicker {
+
+// }

@@ -1,0 +1,13 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+.progressBar {
+  background: $mountain-sage;
+  height: 10px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform-origin: 0%;
+}

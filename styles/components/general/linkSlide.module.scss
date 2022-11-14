@@ -1,0 +1,30 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+a.parent {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  transition: color 300ms $swing;
+  z-index: 0;
+
+  .svg {
+    bottom: 0;
+    fill: transparent;
+    left: -100%;
+    position: absolute;
+    transition: fill 300ms $swing, left 300ms $swing;
+    z-index: -1;
+  }
+
+  &.active,
+  &:hover {
+    color: $link-slide-font-color;
+
+    .svg {
+      fill: $link-slide-background-color;
+      left: 0;
+    }
+  }
+}

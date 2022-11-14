@@ -1,0 +1,108 @@
+@import "../../variables";
+@import "../../mixins";
+
+.title {
+  @include title;
+
+  &.pageDisplayTitle,
+  &.topLevelPageDisplayTitle {
+    display: inline-block;
+    line-height: 1.165;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      display: inline;
+      margin: 0;
+
+      @include top-level-page-display-title;
+    }
+  }
+
+  &.h1 {
+    h1 {
+      @include h1;
+    }
+  }
+
+  &.h2 {
+    h2 {
+      @include h2;
+    }
+  }
+
+  &.h3 {
+    h3 {
+      @include h3;
+    }
+  }
+
+  &.h4 {
+    h4 {
+      @include h4;
+    }
+  }
+
+  &.h5 {
+    h5 {
+      @include h5;
+    }
+  }
+
+  &.h6 {
+    h6 {
+      @include h6;
+    }
+  }
+
+  &.inlineh1 {
+    display: inline;
+
+    h1 {
+      display: inline;
+    }
+  }
+
+  &.inlineh2 {
+    display: inline;
+
+    h2 {
+      display: inline;
+    }
+  }
+
+  &.inlineh3 {
+    display: inline;
+
+    h3 {
+      display: inline;
+    }
+  }
+
+  &.inlineh4 {
+    display: inline;
+
+    h4 {
+      display: inline;
+    }
+  }
+
+  &.inlineh5 {
+    display: inline;
+
+    h5 {
+      display: inline;
+    }
+  }
+
+  &.inlineh6 {
+    display: inline;
+
+    h6 {
+      display: inline;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../mixins";
+@import "../../variables";
+
+[class^="section"].section {
+  @include mobile {
+    align-items: center;
+  }
+}

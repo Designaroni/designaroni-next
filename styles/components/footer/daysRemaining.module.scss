@@ -1,0 +1,7 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+.daysRemaining {
+  @include text;
+}

@@ -1,0 +1,43 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+.navigation {
+  @include navigation;
+
+  .mobileNavigation {
+    background-color: rgba($black-bear, 0.95);
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  .mobileNavigationButtton {
+    z-index: 2;
+  }
+
+  .mobileNavigationSocial {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 22px;
+    padding-right: $page-gutter;
+    position: absolute;
+    top: 0;
+  }
+
+  .mobileLinkWrapper {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding-left: $page-gutter;
+    z-index: 0;
+  }
+
+  .mobileLink {
+    margin-bottom: 40px;
+  }
+}

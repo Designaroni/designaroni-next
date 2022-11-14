@@ -1,0 +1,61 @@
+/* stylelint-disable scss/operator-no-newline-after */
+
+// font
+$font-stack: "TTnorms", "Inter", "Helvetica Neue", sans-serif;
+$secondary-font-stack: "Inter", "TTnorms", "Helvetica Neue", sans-serif;
+$header-font-stack: "TTnorms", "Inter", "Helvetica Neue", sans-serif;
+$font-stack-code: "Menlo", "Monaco", "Lucida Console", "Liberation Mono",
+  "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+
+// transition-timing-function curves
+// https://cubic-bezier.com/#.2,.08,0,1
+$swing: #{cubic-bezier(0.2, 0.08, 0, 1)};
+
+// widths & gutters
+$page-gutter: 40px;
+$page-gutter-half: $page-gutter / 2;
+$page-gutter-top: 100px;
+$mobile-page-gutter-top: 60px;
+$header-height: 100px; // controls header placement in both css and javascript
+$mobile-header-height: 60px; // controls header placement in both css and javascript
+$page-content-guttter-top: 70px;
+$content-gutter-top: $page-gutter-top + $header-height +
+  $page-content-guttter-top;
+$mobile-content-gutter-top: $mobile-page-gutter-top + $mobile-header-height +
+  $page-content-guttter-top;
+$hero-media-horizontal-gutter: 5%;
+$hero-media-width: 100% - ($hero-media-horizontal-gutter * 2);
+$hero-content-left-position: (100% - $hero-media-width) / 4;
+$hero-padding: 205px;
+
+// colors
+$black-bear: #111;
+$charcoal: #151515;
+$swan: #fff;
+$raccoon: #a0a0a0;
+$purple-martin: #30273a;
+$high-country: #996632;
+$mountain-sage: #5d7c5d;
+$sand-dune: #c9c0b3;
+$morning-blue: #2f4f80;
+
+// colors between macOS iOS in all browsers renders a more muted tone for this color
+// I prefer how it looks on iOS but when color matching to the iOS color
+// iOS then looks too muted & washed out
+// $red-rocks: #88543a; // more closely matches iOS color
+$red-rocks: #ac502c;
+$background-color: $charcoal;
+$primary-font-color: $swan;
+$secondary-font-color: $raccoon;
+
+// inline body copy links
+$link-inline-color: $high-country;
+$link-inline-color-hover: $sand-dune;
+$link-inline-background-color-hover: $purple-martin;
+
+// slide link
+$link-slide-font-color: $mountain-sage;
+$link-slide-background-color: $sand-dune;
+
+// tagline
+$tagline-background-color: $purple-martin;

@@ -1,0 +1,21 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+.main {
+  margin-top: $content-gutter-top;
+
+  @include is-mobile {
+    margin-top: $mobile-content-gutter-top;
+  }
+}
+
+.homePage,
+.topLevelPage,
+.postPage,
+.postsListPage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

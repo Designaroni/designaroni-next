@@ -1,0 +1,14 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+.motionFadeAndSlideInWhenInView {
+  height: 100%;
+  width: 100%;
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  &.a {
+    height: initial;
+    width: initial;
+  }
+}

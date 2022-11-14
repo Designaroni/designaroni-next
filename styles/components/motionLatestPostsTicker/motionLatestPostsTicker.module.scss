@@ -1,0 +1,32 @@
+@import "../../mixins";
+@import "../../variables";
+
+.section {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.title {
+  h3 {
+    @include title-large;
+  }
+}
+
+.row {
+  align-self: center;
+  margin-bottom: 40px;
+  width: initial;
+}
+
+.link {
+  line-height: 1.5;
+  margin-right: 400px;
+  white-space: nowrap;
+
+  @include motion-latest-post-ticker-link;
+
+  @include mobile {
+    margin-right: 150px;
+  }
+}

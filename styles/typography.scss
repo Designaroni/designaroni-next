@@ -1,0 +1,56 @@
+@import "./variables";
+@import "./mixins";
+@import "./fonts";
+
+////
+// @see mixins for typography mixins
+////
+
+html,
+body {
+  color: $primary-font-color;
+  font-family: $font-stack;
+  font-size: 1em;
+  letter-spacing: 0.0313em;
+  line-height: 1.75;
+  @include link-styles;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-stack;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+h5 {
+  @include h5;
+}
+
+h6 {
+  @include h6;
+}
+
+footer[class^="footer"] {
+  p {
+    margin: 0;
+  }
+}

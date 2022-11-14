@@ -1,0 +1,107 @@
+@import "./variables";
+@import "./mixins";
+
+.aboutHero {
+  padding-bottom: $hero-padding;
+  padding-top: $hero-padding;
+  position: relative;
+
+  @include tablet {
+    padding-bottom: $hero-padding * 0.7;
+    padding-top: $hero-padding * 0.7;
+  }
+
+  @include mobile {
+    padding-bottom: $hero-padding * 0.5;
+    padding-top: $hero-padding * 0.5;
+  }
+}
+
+.profileImage {
+  img {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+  padding-left: $page-gutter;
+  padding-right: $page-gutter;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .stat {
+    display: flex;
+    flex-flow: column wrap;
+    width: 35%;
+
+    span {
+      text-align: center;
+    }
+
+    &.yearsSpentCoding {
+      align-self: center;
+    }
+
+    &.numberOfTripsThisYear {
+      align-self: flex-start;
+    }
+
+    &.numberOfMilesTraveledThisYear {
+      align-self: flex-end;
+    }
+
+    &.numberOfActiveBuilds {
+      align-self: flex-start;
+    }
+  }
+
+  .number {
+    @include top-level-page-display-title;
+
+    color: $morning-blue;
+    line-height: 1;
+  }
+
+  .description {
+    @include short-description;
+    @include large-paragraph;
+  }
+}
+
+@include short-description-class;
+
+.section {
+  content: "section";
+}
+
+[class^="row"].contentRow {
+  justify-content: flex-end;
+
+  @include small-tablet {
+    flex-direction: column;
+  }
+}
+
+.nestedTitles {
+  // asdf
+}
+
+.titleColumn {
+  margin-right: $page-gutter;
+  min-width: max-content;
+}
+
+.contentColumn {
+  flex-basis: 50%;
+  min-width: 250px;
+
+  @include small-tablet {
+    flex-basis: 100%;
+  }
+}

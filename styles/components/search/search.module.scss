@@ -1,0 +1,29 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+.search {
+  align-items: center;
+  color: $secondary-font-color;
+  display: flex;
+  justify-content: flex-end;
+
+  .text {
+    // -webkit-appearance: none; // check if this is needed
+
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: #666;
+    height: 44px;
+    outline: none;
+    padding: 0;
+    width: 176px;
+    @include navigation;
+  }
+
+  .icon {
+    position: relative;
+    top: 2px;
+  }
+}

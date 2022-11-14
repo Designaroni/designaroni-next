@@ -1,0 +1,66 @@
+@import "../variables";
+@import "../mixins";
+
+.postArticle {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+// .article {}
+
+.categories {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  .categoryLink {
+    margin: 0 $page-gutter / 4;
+
+    &:first-of-type {
+      margin-left: $page-gutter / 2;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.author {
+  width: 80%;
+
+  .contentWrapper {
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  .profileImage {
+    border-radius: 100%;
+    height: 156px;
+    margin-right: $page-gutter / 2;
+    width: 156px;
+  }
+
+  [class="socialTaglines"] {
+    p {
+      line-height: 24px;
+      margin: 0;
+    }
+  }
+}
+
+.relatedPosts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  span {
+    &:first-of-type {
+      margin-right: $page-gutter * 2;
+    }
+
+    @include related-posts;
+  }
+}

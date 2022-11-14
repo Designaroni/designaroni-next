@@ -1,0 +1,59 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+.logo {
+  font-size: 0;
+  transition: none;
+
+  .icon {
+    transition: transform 300ms $swing;
+  }
+
+  &:hover {
+    color: inherit;
+
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .logotype {
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &.variantTwo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .logotype {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  &.variantOne {
+    text-align: center;
+
+    .icon {
+      margin-bottom: 15px;
+      margin-top: 5px;
+    }
+
+    .logotype {
+      bottom: 0;
+      font-size: 32px;
+      line-height: 32px;
+      transition: bottom 300ms $swing;
+    }
+
+    &:hover {
+      .logotype {
+        bottom: 10px;
+      }
+    }
+  }
+}

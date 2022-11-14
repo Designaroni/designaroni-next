@@ -1,0 +1,22 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+a.parent {
+  color: $link-inline-color;
+  position: relative;
+  transition: color 300ms $swing;
+  z-index: 0;
+
+  .svg {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &.active,
+  &:hover {
+    color: $link-inline-color-hover;
+  }
+}

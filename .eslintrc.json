@@ -1,3 +1,77 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier",
+    "next",
+    "next/core-web-vitals"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "jsx-a11y"],
+  "rules": {
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
+    ],
+    "@typescript-eslint/no-unsafe-assignment": 2,
+    "@typescript-eslint/no-unsafe-member-access": 2,
+    "@typescript-eslint/no-unsafe-call": 2,
+    "@typescript-eslint/no-explicit-any": 2,
+    "react/jsx-props-no-spreading": [
+      2,
+      {
+        "exceptions": [
+          "Component",
+          "motion.circle",
+          "motion.div",
+          "motion.path",
+          "motion.line"
+        ]
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      2,
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "sort-keys": "error",
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        "interfaces": {
+          "memberTypes": ["signature", "method", "constructor", "field"],
+          "order": "alphabetically"
+        },
+        "typeLiterals": {
+          "memberTypes": ["signature", "method", "constructor", "field"],
+          "order": "alphabetically"
+        }
+      }
+    ],
+    "camelcase": "error",
+    "react/jsx-sort-props": "error",
+    "newline-before-return": "error",
+    "react/destructuring-assignment": "error"
+  }
 }

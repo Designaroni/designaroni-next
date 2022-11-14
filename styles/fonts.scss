@@ -1,0 +1,296 @@
+/*
+ * TT Norms
+ */
+
+// thin
+@font-face {
+  font-family: TTnorms;
+  font-style: normal;
+  font-weight: 100;
+  src: url("/fonts/ttnorms/tt-norms-thin.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-thin-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-thin-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: TTnorms;
+  font-style: italic;
+  font-weight: 100;
+  src: url("/fonts/ttnorms/tt-norms-thinitalic.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-thinitalic-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-thinitalic-webfont.woff2") format("woff2");
+}
+
+// extra light
+@font-face {
+  font-family: TTnorms;
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/ttnorms/tt-norms-extralight.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-extralight-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-extralight-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: TTnorms;
+  font-style: italic;
+  font-weight: 200;
+  src: url("/fonts/ttnorms/tt-norms-extralightitalic.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-extralightitalic-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-extralightitalic-webfont.woff2")
+      format("woff2");
+}
+
+// light
+@font-face {
+  font-family: TTnorms;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/ttnorms/tt-norms-light.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-light-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-light-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: TTnorms;
+  font-style: italic;
+  font-weight: 300;
+  src: url("/fonts/ttnorms/tt-norms-lightitalic.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-lightitalic-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-lightitalic-webfont.woff2") format("woff2");
+}
+
+// regular
+@font-face {
+  font-family: TTnorms;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/ttnorms/tt-norms-regular.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-regular-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-regular-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: TTnorms;
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/ttnorms/tt-norms-italic.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-italic-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-italic-webfont.woff2") format("woff2");
+}
+
+// medium
+@font-face {
+  font-family: TTnorms;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/ttnorms/tt-norms-medium.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-medium-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-medium-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: TTnorms;
+  font-style: italic;
+  font-weight: 500;
+  src: url("/fonts/ttnorms/tt-norms-mediumitalic.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-mediumitalic-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-mediumitalic-webfont.woff2") format("woff2");
+}
+
+// bold
+@font-face {
+  font-family: TTnorms;
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/ttnorms/tt-norms-bold.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-bold-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-bold-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: TTnorms;
+  font-style: italic;
+  font-weight: 600;
+  src: url("/fonts/ttnorms/tt-norms-bolditalic.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-bolditalic-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-bolditalic-webfont.woff2") format("woff2");
+}
+
+// extrabold
+@font-face {
+  font-family: TTnorms;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/ttnorms/tt-norms-extrabold.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-extrabold-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-extrabold-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: TTnorms;
+  font-style: italic;
+  font-weight: 700;
+  src: url("/fonts/ttnorms/tt-norms-extrabolditalic.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-extrabolditalic-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-extrabolditalic-webfont.woff2") format("woff2");
+}
+
+// black
+@font-face {
+  font-family: TTnorms;
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/ttnorms/tt-norms-black.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-black-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-black-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: TTnorms;
+  font-style: italic;
+  font-weight: 800;
+  src: url("/fonts/ttnorms/tt-norms-blackitalic.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-blackitalic-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-blackitalic-webfont.woff2") format("woff2");
+}
+
+// heavy
+@font-face {
+  font-family: TTnorms;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/ttnorms/tt-norms-heavy.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-heavy-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-heavy-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: TTnorms;
+  font-style: italic;
+  font-weight: 900;
+  src: url("/fonts/ttnorms/tt-norms-heavyitalic.otf") format("opentype"),
+    url("/fonts/ttnorms/tt-norms-heavyitalic-webfont.woff") format("woff"),
+    url("/fonts/ttnorms/tt-norms-heavyitalic-webfont.woff2") format("woff2");
+}
+
+/*
+ * Inter
+ */
+
+// thin
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100;
+  src: url("/fonts/inter/inter-thin.ttf") format("opentype");
+}
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 100;
+  src: url("/fonts/inter/inter-thinitalic.ttf") format("opentype");
+}
+
+// extra light
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/inter/inter-extralight.ttf") format("opentype");
+}
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 200;
+  src: url("/fonts/inter/inter-extralightitalic.ttf") format("opentype");
+}
+
+// light
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/inter/inter-light.ttf") format("opentype");
+}
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 300;
+  src: url("/fonts/inter/inter-lightitalic.ttf") format("opentype");
+}
+
+// regular
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/inter/inter-regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/inter/inter-italic.ttf") format("opentype");
+}
+
+// medium
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/inter/inter-medium.ttf") format("opentype");
+}
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 500;
+  src: url("/fonts/inter/inter-mediumitalic.ttf") format("opentype");
+}
+
+// semibold
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/inter/inter-semibold.ttf") format("opentype");
+}
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 600;
+  src: url("/fonts/inter/inter-semibolditalic.ttf") format("opentype");
+}
+
+// bold
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/inter/inter-bold.ttf") format("opentype");
+}
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 700;
+  src: url("/fonts/inter/inter-bolditalic.ttf") format("opentype");
+}
+
+// extrabold
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/inter/inter-extrabold.ttf") format("opentype");
+}
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 800;
+  src: url("/fonts/inter/inter-extrabolditalic.ttf") format("opentype");
+}
+
+// black
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/inter/inter-black.ttf") format("opentype");
+}
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 900;
+  src: url("/fonts/inter/inter-blackitalic.ttf") format("opentype");
+}

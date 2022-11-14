@@ -1,0 +1,9 @@
+@import "../../variables";
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: $page-gutter-half;
+  padding-right: $page-gutter-half;
+}

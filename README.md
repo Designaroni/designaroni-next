@@ -32,3 +32,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Coding style guide
+
+### SCSS & CSS Modules
+
+##### Overriding component utility classes in specialized components
+
+- At times it is useful to override classes used in utility/layout components the following method can be used:
+  - `[class^="section"].aboutSection { /* ... */ }`

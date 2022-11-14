@@ -1,0 +1,18 @@
+@import "./variables";
+
+:export {
+  backgroundColor: $background-color;
+  blackBear: $black-bear;
+  headerHeight: $header-height;
+  highCountry: $high-country;
+  mobileHeaderHeight: $mobile-header-height;
+  morningBlue: $morning-blue;
+  mountainSage: $mountain-sage;
+  primaryFontColor: $primary-font-color;
+  purpleMartin: $purple-martin;
+  raccoon: $raccoon;
+  sandDune: $sand-dune;
+  secondaryFontColor: $secondary-font-color;
+  swan: $swan;
+  swing: 0.2, 0.08, 0, 1;
+}

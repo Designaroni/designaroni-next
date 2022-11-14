@@ -1,0 +1,31 @@
+@import "../../variables";
+@import "../../mixins";
+
+.section {
+  background-color: $black-bear;
+  display: flex;
+  overflow: hidden;
+}
+
+.row {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.title {
+  h3 {
+    @include title-large;
+  }
+}
+
+a.link {
+  overflow: hidden;
+  padding-right: 100px; // padding should match the svg width below
+
+  @include motion-categories-ticker-link;
+
+  .svg,
+  &:last-of-type .svg {
+    width: calc(100% - 100px);
+  }
+}

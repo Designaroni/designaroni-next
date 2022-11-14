@@ -1,0 +1,63 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+.header {
+  align-items: center;
+  display: flex;
+  height: $header-height;
+  padding-left: $page-gutter;
+  padding-right: $page-gutter;
+  position: fixed;
+  top: $page-gutter-top;
+  width: 100vw;
+  z-index: 2;
+
+  @include is-mobile {
+    height: $mobile-header-height;
+    justify-content: space-between;
+  }
+
+  .navigation {
+    display: flex;
+    margin-bottom: 29px;
+
+    @include is-mobile {
+      margin-bottom: 10px;
+    }
+
+    a:not(:last-of-type) {
+      padding-right: 30px;
+    }
+  }
+
+  .search {
+    margin-bottom: 22px;
+  }
+
+  .social {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 29px;
+  }
+
+  .logo {
+    @include is-mobile {
+      justify-content: flex-end;
+      margin-bottom: -10px;
+    }
+  }
+
+  .navigation,
+  .search,
+  .social {
+    align-self: flex-end;
+  }
+
+  .navigation,
+  .logo,
+  .search,
+  .social {
+    flex-basis: 33%;
+  }
+}

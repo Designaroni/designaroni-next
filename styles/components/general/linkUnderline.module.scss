@@ -1,0 +1,24 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../fonts";
+
+a.parent {
+  overflow: hidden;
+  position: relative;
+
+  .svg {
+    bottom: -2px;
+    fill: $background-color;
+    left: 0;
+    position: absolute;
+    transition: fill 300ms $swing, bottom 300ms $swing;
+  }
+
+  &.active,
+  &:hover {
+    .svg {
+      bottom: 0;
+      fill: $primary-font-color;
+    }
+  }
+}

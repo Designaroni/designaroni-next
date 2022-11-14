@@ -1,0 +1,152 @@
+@import "../../mixins";
+@import "../../variables";
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 1245px;
+  overflow: hidden;
+
+  @include featured-pages-column {
+    flex-direction: column;
+  }
+}
+
+.trips,
+.journal,
+.builds,
+.work {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  .pageDisplayTitle {
+    position: absolute;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $red-rocks;
+    }
+  }
+}
+
+.trips,
+.journal {
+  justify-content: start;
+
+  .pageDisplayTitle {
+    right: 0;
+  }
+}
+
+.builds,
+.work {
+  justify-content: end;
+
+  .pageDisplayTitle {
+    left: 0;
+  }
+}
+
+.trips,
+.builds {
+  margin-right: $page-gutter-half;
+
+  @include featured-pages-column {
+    margin-right: initial;
+  }
+}
+
+.journal,
+.work {
+  margin-left: $page-gutter-half;
+
+  @include featured-pages-column {
+    margin-left: initial;
+  }
+}
+
+.journal,
+.builds {
+  @include featured-pages-column {
+    margin-bottom: $page-gutter-half;
+    margin-top: $page-gutter-half;
+  }
+}
+
+.trips {
+  align-self: start;
+  max-width: 597px;
+
+  @include featured-pages-column {
+    margin-bottom: $page-gutter-half;
+  }
+
+  .pageDisplayTitle {
+    bottom: 179px;
+  }
+}
+
+.journal {
+  align-self: center;
+  max-width: 640px;
+
+  @include featured-pages-column {
+    align-self: end;
+  }
+
+  .pageDisplayTitle {
+    bottom: 71px;
+  }
+}
+
+.builds {
+  align-self: center;
+  max-width: 565px;
+
+  @include featured-pages-column {
+    align-self: start;
+  }
+
+  .pageDisplayTitle {
+    bottom: 114px;
+  }
+}
+
+.work {
+  align-self: end;
+  max-width: 611px;
+
+  @include featured-pages-column {
+    margin-top: $page-gutter-half;
+  }
+
+  .pageDisplayTitle {
+    bottom: 101px;
+  }
+}
+
+.imageWrapper {
+  align-items: center;
+  display: flex;
+  height: 450px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 360px;
+
+  .landscapeImage {
+    height: 100%;
+    width: auto;
+  }
+
+  .portraitImage {
+    height: auto;
+    width: 100%;
+  }
+}

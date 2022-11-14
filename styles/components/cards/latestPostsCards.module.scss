@@ -1,0 +1,7 @@
+@import "../../mixins";
+@import "../../variables";
+
+.row {
+  flex-wrap: wrap;
+  justify-content: center;
+}
