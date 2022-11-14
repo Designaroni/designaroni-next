@@ -20,7 +20,7 @@ import MotionFadeAndStaggerChildrenWhenInView from "@/components/motionFadeAndSt
 import Column from "@/components/column/column";
 import Social from "@/components/social";
 import PageContentFooter from "@/components/pageContentFooter/pageContentFooter";
-import MotionSocial from "@/components/social/motionSocial";
+// import MotionSocial from "@/components/social/motionSocial";
 
 interface PageProps {
   footerData: FooterData;
@@ -242,9 +242,9 @@ const About: NextPage<PageProps> = (pageProps) => {
             <Title>Where to find me on the internet:</Title>
           </MotionFadeInWhenInView>
           <MotionFadeInWhenInView>
-            <MotionFadeAndStaggerChildrenWhenInView consumeFirstChild>
-              <Social />
-            </MotionFadeAndStaggerChildrenWhenInView>
+            {/* <MotionFadeAndStaggerChildrenWhenInView consumeFirstChild> */}
+            <Social />
+            {/* </MotionFadeAndStaggerChildrenWhenInView> */}
           </MotionFadeInWhenInView>
         </Column>
       </Section>

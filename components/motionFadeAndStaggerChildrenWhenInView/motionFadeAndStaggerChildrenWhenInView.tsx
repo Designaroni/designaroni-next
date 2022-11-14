@@ -1,7 +1,7 @@
 // this should go in an hoc/ directory
 import {
   Children,
-  cloneElement,
+  // cloneElement,
   isValidElement,
   ReactChild,
   ReactFragment,
@@ -18,7 +18,7 @@ import {
 } from "framer-motion";
 import CONSTANTS from "@/lib/constants";
 import styles from "@/styles/components/motionFadeAndStaggerChildrenWhenInView/motionFadeAndStaggerChildrenWhenInView.module.scss";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 
 interface MotionFadeAndStaggerChildrenWhenInView {
   childVariants?: Variants;
@@ -99,33 +99,28 @@ const MotionFadeAndStaggerChildrenWhenInView = ({
   }, [controls, isInView]);
 
   if (consumeFirstChild) {
-    let ParentElement;
-    Children.map(childrenArray, (child: Child) => {
-      if (!isValidElement(child)) return null;
-
-      // const grandChildrenArray = child;
-
-      // console.log("grandChildrenArray", grandChildrenArray);
-
-      // if (isValidElement(child)) {
-      const parentPropsClassName: string =
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-        Object.hasOwn(child.props, "className") === true
-          ? // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-            (child.props.className as string)
-          : "";
-
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      ParentElement = cloneElement(child, {
-        ...child.props,
-        className: parentPropsClassName
-          ? `${parentClassNames} ${parentPropsClassName}`
-          : parentClassNames,
-        variants: parentVariants,
-      });
-    });
-
-    return ParentElement;
+    //   let ParentElement;
+    //   Children.map(childrenArray, (child: Child) => {
+    //     if (!isValidElement(child)) return null;
+    //     // const grandChildrenArray = child;
+    //     // console.log("grandChildrenArray", grandChildrenArray);
+    //     // if (isValidElement(child)) {
+    //     const parentPropsClassName: string =
+    //       // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    //       Object.hasOwn(child.props, "className") === true
+    //         ? // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    //           (child.props.className as string)
+    //         : "";
+    //     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    //     ParentElement = cloneElement(child, {
+    //       ...child.props,
+    //       className: parentPropsClassName
+    //         ? `${parentClassNames} ${parentPropsClassName}`
+    //         : parentClassNames,
+    //       variants: parentVariants,
+    //     });
+    //   });
+    //   return ParentElement;
   }
 
   return (
