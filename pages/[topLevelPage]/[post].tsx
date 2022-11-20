@@ -1,3 +1,4 @@
+/** Commented out getPostContentById for now since it's not rendering with the production strapi environment */
 import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import FutureImage from "next/future/image";
 import Markdown from "markdown-to-jsx";

@@ -98,6 +98,7 @@ const MotionFadeAndStaggerChildrenWhenInView = ({
     }
   }, [controls, isInView]);
 
+  // @todo finish consume first child work
   if (consumeFirstChild) {
     //   let ParentElement;
     //   Children.map(childrenArray, (child: Child) => {
