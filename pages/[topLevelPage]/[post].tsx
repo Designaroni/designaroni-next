@@ -6,7 +6,7 @@ import {
   getTopLevelPageNames,
   getAllPostPathsAndTLP,
   getIdFromPostPathsByTLP,
-  // getPostContentById,
+  getPostContentById,
   getFooterData,
   AllPostPathsAndTLP,
   PostContentById,
@@ -170,8 +170,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { id: postId } = postsIdsAndPaths.filter(
     (data: IdFromPostPathsByTLP) => postURLString === data.path
   )[0];
-  // const postContent: PostContentById = await getPostContentById(postId);
-  // const { pageMetaData } = postContent;
+  const postContent: PostContentById = await getPostContentById(postId);
+  const { pageMetaData } = postContent;
   const topLevelPageNames: TopLevelPageNames = await getTopLevelPageNames();
   const footerData: FooterData = await getFooterData();
   // adjacent posts component
@@ -212,8 +212,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       footerData,
-      // pageContent: postContent,
-      // pageMetaData,
+      pageContent: postContent,
+      pageMetaData,
       relatedPosts,
       topLevelPageNames,
     },

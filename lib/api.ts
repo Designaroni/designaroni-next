@@ -1114,7 +1114,7 @@ export async function getPostContentById(id: string) {
   const data = await fetchAPI<FetchJSON["data"]>(
     `
     query PostContentById {
-      posts(filters: { id: { contains: "${id}" } }) {
+      posts(filters: { id: { eq: "${id}" } }) {
         data {
           id
           attributes {
