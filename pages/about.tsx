@@ -135,8 +135,8 @@ const About: NextPage<PageProps> = (pageProps) => {
                 <br />
                 <Tab />
                 Project management & documentation is handled through Atlassian
-                Cloud, incorporating automated task flows based on github PR's,
-                branches, merge & deployment statuses.
+                Cloud, incorporating automated task flows based on github PR
+                {`'`}s, branches, merge & deployment statuses.
               </p>
             </MotionFadeInWhenInView>
           </Column>
