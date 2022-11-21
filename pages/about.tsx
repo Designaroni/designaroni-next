@@ -131,15 +131,17 @@ const About: NextPage<PageProps> = (pageProps) => {
                 stylelint & eslint applying a handful of <code>typescript</code>
                 , <code>stylelint-config</code>, <code>eslint:recommended</code>
                 , <code>prettier</code> & <code>airbnb</code> formatters.
+                <br />
+                <br />
+                <Tab />
+                Project management & documentation is handled through Atlassian
+                Cloud, incorporating automated task flows based on github PR's,
+                branches, merge & deployment statuses.
               </p>
             </MotionFadeInWhenInView>
           </Column>
         </Row>
       </Section>
-      {/* <Section sectionType="center">
-        <span>Where I am, where I&apos;ve been</span>
-        <span>Minnesota, Utah travel &amp; – life map</span>
-      </Section> */}
       <Section>
         <Row className={styles.contentRow}>
           <Column className={styles.titleColumn}>
@@ -152,11 +154,11 @@ const About: NextPage<PageProps> = (pageProps) => {
               <p>
                 <Tab />
                 My earliest memories reside in long roadtrips across the
-                country, from Minnesota to Colorado to Arkansas & Missouri.
+                country, from Minnesota, to Colorado, to Arkansas & Missouri.
                 While I spend many days coding I maintain an active life hiking,
                 camping & traveling in warmer months and big mountain skiing &
                 snowboarding throughout the winter. Since the end of 2021 I{`'`}
-                ve been rolling pursuits into trips Across the country in a
+                ve been rolling pursuits into trips across the country in a
                 Tacoma 4x4 TRD Offroad with a Four Wheel Campers Project M.
               </p>
             </MotionFadeInWhenInView>
@@ -175,10 +177,10 @@ const About: NextPage<PageProps> = (pageProps) => {
               <p>
                 <Tab />
                 After {`${currentAge}`} years under the sun, I{`'`}ve seen some
-                things, experienced a journery in life that has taken me from
-                Missouri to Minnesota, across the country, across the globe &
-                now a life in and around the United States Southwest. This is my
-                place to write about the unfiltered journey.
+                things, experienced a journey in life that has taken me from
+                Oklahoma to Minnesota, across the country, across the globe &
+                now a life settled around the United States Southwest. This is
+                my place to write unfiltered about the journey.
               </p>
             </MotionFadeInWhenInView>
           </Column>
@@ -232,19 +234,12 @@ const About: NextPage<PageProps> = (pageProps) => {
         </Row>
       </Section>
       <Section sectionType="center">
-        <MotionFadeInWhenInView>
-          <Title>Latest Posts</Title>
-        </MotionFadeInWhenInView>
-      </Section>
-      <Section sectionType="center">
         <Column columnType="center">
           <MotionFadeInWhenInView>
             <Title>Where to find me on the internet:</Title>
           </MotionFadeInWhenInView>
           <MotionFadeInWhenInView>
-            {/* <MotionFadeAndStaggerChildrenWhenInView consumeFirstChild> */}
             <Social />
-            {/* </MotionFadeAndStaggerChildrenWhenInView> */}
           </MotionFadeInWhenInView>
         </Column>
       </Section>
