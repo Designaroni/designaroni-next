@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": ">=16.9.0"
+    "node": "16.9.0"
   },
   "name": "designaroni-next",
   "version": "0.1.0",
