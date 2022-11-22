@@ -18,33 +18,39 @@ const Layout = ({
   footerData,
   children,
   pageType,
-}: Layout) => (
-  <>
-    <Head>
-      <meta
-        key="viewport"
-        content="initial-scale=1.0, width=device-width"
-        name="viewport"
-      />
-      <title key="title">My page title</title>
-      <meta
-        key="description"
-        content="🏕️ Designaroni.com – Trips, Journal, Builds, About"
-        name="description"
-      />
-    </Head>
-    <MotionFadeInWhenInView>
-      <Header topLevelPageNames={topLevelPageNames} />
-    </MotionFadeInWhenInView>
-    <main
-      className={pageType ? `${styles.main} ${styles[pageType]}` : styles.main}
-    >
-      {children}
-    </main>
-    <MotionFadeInWhenInView>
-      <Footer footerData={footerData} topLevelPageNames={topLevelPageNames} />
-    </MotionFadeInWhenInView>
-  </>
-);
+}: Layout) => {
+  console.log("Layout pageType", pageType);
+
+  return (
+    <>
+      <Head>
+        <meta
+          key="viewport"
+          content="initial-scale=1.0, width=device-width"
+          name="viewport"
+        />
+        <title key="title">My page title</title>
+        <meta
+          key="description"
+          content="🏕️ Designaroni.com – Trips, Journal, Builds, About"
+          name="description"
+        />
+      </Head>
+      <MotionFadeInWhenInView>
+        <Header topLevelPageNames={topLevelPageNames} />
+      </MotionFadeInWhenInView>
+      <main
+        className={
+          pageType ? `${styles.main} ${styles[pageType]}` : styles.main
+        }
+      >
+        {children}
+      </main>
+      <MotionFadeInWhenInView>
+        <Footer footerData={footerData} topLevelPageNames={topLevelPageNames} />
+      </MotionFadeInWhenInView>
+    </>
+  );
+};
 
 export default Layout;

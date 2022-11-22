@@ -23,6 +23,7 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
 
   console.log("Component.name", Component.name);
   const pageType = getPageType(Component.name, topLevelPageNames);
+  console.log("pageType", pageType);
 
   // fontLoaded
   useEffect(() => {
