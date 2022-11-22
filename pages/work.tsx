@@ -168,11 +168,9 @@ Responsible for working with project teams to design and deliver high quality cl
       </Section>
       <Section sectionType="center">
         <Column columnType="center">
-          <hr />
           <Title>Digital Resume</Title>
         </Column>
       </Section>
-      <hr />
       <Section>
         <Row className={styles.contentRow}>
           <Column className={styles.titleColumn}>
