@@ -137,8 +137,8 @@ const MotionFadeAndStaggerChildrenWhenInView = ({
 
         if (isValidElement(child)) {
           const childPropsClassName: string =
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-            Object.hasOwn(child.props, "className") === true
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call, no-prototype-builtins
+            child.props.hasOwnProperty("className") === true
               ? // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
                 (child.props.className as string)
               : "";
