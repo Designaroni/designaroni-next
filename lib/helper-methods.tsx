@@ -77,33 +77,6 @@ export const parseDate = (
   });
 };
 
-export const getPageType = (
-  componentName: string,
-  topLevelPageNames: string[] // same as TopLevelPageNames interface but this illiminates circular dependency while interface is defined in ./api
-): string | undefined => {
-  if (componentName === "Home") {
-    return "homePage";
-  }
-  if (
-    componentName === "TopLevelPage" ||
-    topLevelPageNames.includes(componentName)
-  ) {
-    return "topLevelPage";
-  }
-  if (componentName === "Post") {
-    return "postPage";
-  }
-  if (
-    componentName === "CategoryPosts" ||
-    componentName === "AuthorPosts" ||
-    componentName === "TopLevelPagePosts"
-  ) {
-    return "postsListPage";
-  }
-
-  return undefined;
-};
-
 const fallbackImage = `https://api.designaroni.com/uploads/designaroni_fallback_image_497eb3437d.jpg?updated_at=2022-05-12T15:06:08.538Z`;
 const fallbackFetchURL = `https://api.designaroni.com`;
 
@@ -134,6 +107,30 @@ export const capitalizeFullName = ([first, ...rest]: string) =>
 
 export const toNumber = (string: string) =>
   Number(string.replace(/[^0-9]+/g, ""));
+
+export const getPageType = (
+  asPath: string,
+  pathName: string,
+  topLevelPageNames: string[] // same as TopLevelPageNames interface but this illiminates circular dependency while interface is defined in ./api
+): string | undefined => {
+  if (pathName === "/") {
+    return "homePage";
+  }
+  if (
+    pathName === "/[topLevelPage]" ||
+    topLevelPageNames.includes(capitalize(asPath.replace("/", "")))
+  ) {
+    return "topLevelPage";
+  }
+  if (pathName.includes("[post]")) {
+    return "postPage";
+  }
+  if (pathName.includes("posts")) {
+    return "postsListPage";
+  }
+
+  return undefined;
+};
 
 // javascript color conversions
 // adapted from hexToRGB

@@ -17,13 +17,12 @@ export interface CustomAppProps extends AppProps {
 
 const MyApp = ({ Component, pageProps }: CustomAppProps) => {
   const router = useRouter();
+  const { pathname, asPath } = router;
   const [fontsLoaded, setFontsLoaded] = useState(false);
   const [routeLoaded, setRouteLoaded] = useState(true);
   const { footerData, topLevelPageNames } = pageProps;
 
-  console.log("Component.name", Component.name);
-  const pageType = getPageType(Component.name, topLevelPageNames);
-  console.log("pageType", pageType);
+  const pageType = getPageType(asPath, pathname, topLevelPageNames);
 
   // fontLoaded
   useEffect(() => {
