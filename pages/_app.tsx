@@ -21,6 +21,7 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
   const [routeLoaded, setRouteLoaded] = useState(true);
   const { footerData, topLevelPageNames } = pageProps;
 
+  console.log("Component.name", Component.name);
   const pageType = getPageType(Component.name, topLevelPageNames);
 
   // fontLoaded
