@@ -4,6 +4,7 @@ import CONSTANTS from "@/lib/constants";
 import styles from "@/styles/components/general/motionLinkInline.module.scss";
 import variables from "@/styles/variables.module.scss";
 import { forwardRef, Ref } from "react";
+import { ArrowSquareOut } from "phosphor-react";
 
 interface MotionLinkInline {
   className?: string;
@@ -19,6 +20,7 @@ const MotionLinkInline = forwardRef(
     { className, hoverColor, initialColor, link, text }: MotionLinkInline,
     ref: Ref<HTMLAnchorElement> | undefined
   ) => {
+    const target = link.includes("https://") ? "_blank" : undefined;
     const underlineVariants = {
       hover: {
         fill: hoverColor || variables.purpleMartin,
@@ -49,6 +51,7 @@ const MotionLinkInline = forwardRef(
             className ? `${styles.parent} ${className}` : styles.parent
           }
           initial="initial"
+          target={target}
           whileHover="hover"
         >
           {text}
@@ -59,6 +62,12 @@ const MotionLinkInline = forwardRef(
           >
             <rect height="100%" width="100%" />
           </motion.svg>
+          {target && (
+            <>
+              {" "}
+              <ArrowSquareOut size={12} />
+            </>
+          )}
         </motion.a>
       </Link>
     );
