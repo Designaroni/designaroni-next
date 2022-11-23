@@ -82,13 +82,12 @@ const About: NextPage<PageProps> = (pageProps) => {
       <Section sectionType="center">
         <Row className={styles.shortDescription} elementType="largeP">
           <MotionFadeInWhenInView>
-            <Tab />I{`'`}m Ian Roberts, {`${currentAge}`} year old human.
-            Originally from Minnesota, top coast USA, I reside in Cache Valley
-            Utah, a high desert valley surrounded by mountains, trials with
-            opportunities for year long outdoor recreation. Life for me is an
-            ADHD mix of the pursuit of the analog & digital – art, design,
-            coding, traveling. This site is dedicated to the pursuit of a
-            designed life & work well done.
+            <Tab />I{`'`}m Ian Roberts, {`${currentAge}`} year old human. I
+            reside in Cache Valley Utah, a high desert valley surrounded by
+            mountains, trials, & opportunities for year long outdoor recreation.
+            Life for me is an ADHD fueled pursuit of the analog & digital – art,
+            design, coding, traveling. This site is dedicated to the pursuit of
+            a designed life & work well done.
           </MotionFadeInWhenInView>
         </Row>
       </Section>
@@ -133,9 +132,27 @@ const About: NextPage<PageProps> = (pageProps) => {
                 , <code>prettier</code> & <code>airbnb</code> formatters.
                 <br />
                 <br />
+                Interactive, Animation & transitions are largely implemented
+                with{" "}
+                <MotionLinkInline
+                  link="https://www.framer.com/motion/"
+                  text="Framer Motion"
+                />{" "}
+                , a production-ready animation library for react. Initial
+                interactive mockups & designs are also create with the{" "}
+                <MotionLinkInline
+                  link="https://www.framer.com/"
+                  text="Framer"
+                />{" "}
+                app, where pages, components & interaction experiences can be
+                fully designed prior to moving the work into the implementation
+                stage.
+                <br />
+                <br />
                 <Tab />
                 Project management & documentation is handled through Atlassian
-                Cloud, incorporating automated task flows based on github PR
+                Cloud with Jira & Confluence, incorporating automated task flows
+                based on github PR
                 {`'`}s, branches, merge & deployment statuses.
               </p>
             </MotionFadeInWhenInView>
@@ -153,13 +170,20 @@ const About: NextPage<PageProps> = (pageProps) => {
             <MotionFadeInWhenInView>
               <p>
                 <Tab />
-                My earliest memories reside in long roadtrips across the
-                country, from Minnesota, to Colorado, to Arkansas & Missouri.
-                While I spend many days coding I maintain an active life hiking,
-                camping & traveling in warmer months and big mountain skiing &
-                snowboarding throughout the winter. Since the end of 2021 I{`'`}
+                My earliest memories reside in roadtrips across the country,
+                from Minnesota, to Colorado, to Arkansas & Missouri. While I
+                spend many days coding I maintain an active life hiking, trail
+                running, camping & traveling in warmer months and big mountain
+                skiing & snowboarding throughout the winter. Since the end of
+                2021 I{`'`}
                 ve been rolling pursuits into trips across the country in a
                 Tacoma 4x4 TRD Offroad with a Four Wheel Campers Project M.
+                <br />
+                <br />
+                <i>
+                  Posts on Trips can be found{" "}
+                  <MotionLinkInline link="/trips" text="here" />.
+                </i>
               </p>
             </MotionFadeInWhenInView>
           </Column>
@@ -178,9 +202,16 @@ const About: NextPage<PageProps> = (pageProps) => {
                 <Tab />
                 After {`${currentAge}`} years under the sun, I{`'`}ve seen some
                 things, experienced a journey in life that has taken me from
-                Oklahoma to Minnesota, across the country, across the globe &
-                now a life settled around the United States Southwest. This is
-                my place to write unfiltered about the journey.
+                Oklahoma to Minnesota to Utah, trips across the country, design
+                projects around the globe & now a life settled around the United
+                States Southwest. This is my place to write unfiltered about the
+                journey.
+                <br />
+                <br />
+                <i>
+                  Journal posts can be found{" "}
+                  <MotionLinkInline link="/journal" text="here" />.
+                </i>
               </p>
             </MotionFadeInWhenInView>
           </Column>
@@ -198,13 +229,18 @@ const About: NextPage<PageProps> = (pageProps) => {
               <p>
                 <Tab />
                 In 2017 I flew into Las Vegas for a cross country snowboarding
-                trip and drove across the country in a shakey, crusty,
-                sun-baked, desert dusted 1990 Sahara Jeep Wrangler. In 2021,
-                post-pandemic, I reorganized my life, after flipping multiple
-                auction cars & trucks I settled in to a 2021 Toyota Tacoma TRD
-                Offroad. In September of that year, hunting for one of 10 viable
-                options for truck campers, the Four Wheel Campers Project M came
-                into fruition.
+                trip, purchased a shakey, crusty, sun-baked, desert dusted 1990
+                Sahara Jeep Wrangler and drove across the country. In 2021,
+                post-pandemic, after flipping multiple auction cars & trucks I
+                settled in to a 2021 Toyota Tacoma TRD Offroad. In September of
+                that year, hunting for one of 10 viable options for truck
+                campers, the Four Wheel Campers Project M came into fruition.
+                <br />
+                <br />
+                <i>
+                  Posts on Builds can be found{" "}
+                  <MotionLinkInline link="/builds" text="here" />.
+                </i>
               </p>
             </MotionFadeInWhenInView>
           </Column>
@@ -226,8 +262,13 @@ const About: NextPage<PageProps> = (pageProps) => {
                 Native & Typescript as a Senior Front End Developer for{" "}
                 <MotionLinkInline link="https://ifit.com" text="@iFIT" />, Front
                 End Development has been my dream career since {careerStartYear}
-                . Posts on code, a portfolio of work & interactive resume can be
-                found <MotionLinkInline link="/work" text="here" />.
+                .
+                <br />
+                <br />
+                <i>
+                  A digital resume can be found{" "}
+                  <MotionLinkInline link="/work" text="here" />.
+                </i>
               </p>
             </MotionFadeInWhenInView>
           </Column>
