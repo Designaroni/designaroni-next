@@ -84,7 +84,7 @@ const About: NextPage<PageProps> = (pageProps) => {
           <MotionFadeInWhenInView>
             <Tab />I{`'`}m Ian Roberts, {`${currentAge}`} year old human. I
             reside in Cache Valley Utah, a high desert valley surrounded by
-            mountains, trials, & opportunities for year long outdoor recreation.
+            mountains, trails, & opportunities for year long outdoor recreation.
             Life for me is an ADHD fueled pursuit of the analog & digital – art,
             design, coding, traveling. This site is dedicated to the pursuit of
             a designed life & work well done.
