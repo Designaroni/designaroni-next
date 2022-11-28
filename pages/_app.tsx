@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import Script from "next/script";
 import { FooterData, TopLevelPageNames } from "@/lib/api";
 import { getPageType } from "@/lib/helper-methods";
@@ -18,7 +19,7 @@ export interface CustomAppProps extends AppProps {
 }
 
 const GlobalGoogleAnalytics = () => {
-  if (!env.G_TAG_MEASUREMENT_ID) {
+  if (env.NODE_ENV === "development") {
     return null;
   }
 
@@ -34,9 +35,9 @@ const GlobalGoogleAnalytics = () => {
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
-
+          
           gtag('config', '${env.G_TAG_MEASUREMENT_ID}');
-        `}
+          `}
       </Script>
     </>
   );
