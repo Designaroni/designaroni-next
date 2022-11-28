@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { FooterData, TopLevelPageNames } from "@/lib/api";
 import { getPageType } from "@/lib/helper-methods";
 import { useEffect, useState } from "react";
@@ -8,12 +9,38 @@ import FontFaceObserver from "fontfaceobserver";
 import Layout from "@/components/layout";
 import { LoadingScreen } from "@/components/loading";
 import "@/styles/globals.scss";
+import { env } from "process";
 
 export interface CustomAppProps extends AppProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Component: NextComponentType<NextPageContext, any, any>;
   pageProps: { footerData: FooterData; topLevelPageNames: TopLevelPageNames };
 }
+
+const GlobalGoogleAnalytics = () => {
+  if (!env.G_TAG_MEASUREMENT_ID) {
+    return null;
+  }
+
+  return (
+    <>
+      {/* Google tag (gtag.js) */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${env.G_TAG_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${env.G_TAG_MEASUREMENT_ID}');
+        `}
+      </Script>
+    </>
+  );
+};
 
 const MyApp = ({ Component, pageProps }: CustomAppProps) => {
   const router = useRouter();
@@ -62,29 +89,38 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
 
   if (!fontsLoaded || !routeLoaded)
     return (
-      <LoadingScreen
-      // loadingMessage={[
-      //   "Route planning...",
-      //   "Foraging mushrooms...",
-      //   "Scrambling data...",
-      // ]}
-      // loadingMessage="Waiting for snow to fall..."
-      />
+      <>
+        <GlobalGoogleAnalytics />
+        <LoadingScreen
+        // loadingMessage={[
+        //   "Route planning...",
+        //   "Foraging mushrooms...",
+        //   "Scrambling data...",
+        // ]}
+        // loadingMessage="Waiting for snow to fall..."
+        />
+      </>
     );
 
   if (!topLevelPageNames)
     return (
-      <LoadingScreen loadingMessage="Looks like we're still hibernating, check back later" />
+      <>
+        <GlobalGoogleAnalytics />
+        <LoadingScreen loadingMessage="Looks like we're still hibernating, check back later" />
+      </>
     );
 
   return (
-    <Layout
-      footerData={footerData}
-      pageType={pageType}
-      topLevelPageNames={topLevelPageNames}
-    >
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <GlobalGoogleAnalytics />
+      <Layout
+        footerData={footerData}
+        pageType={pageType}
+        topLevelPageNames={topLevelPageNames}
+      >
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 };
 
