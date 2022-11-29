@@ -19,7 +19,15 @@ export interface CustomAppProps extends AppProps {
 }
 
 const GlobalGoogleAnalytics = () => {
-  if (env.NODE_ENV === "development") {
+  console.log("env.G_TAG_MEASUREMENT_ID", env.G_TAG_MEASUREMENT_ID);
+  console.log("env.NODE_ENV", env.NODE_ENV);
+  console.log(
+    "process.env.G_TAG_MEASUREMENT_ID",
+    process.env.G_TAG_MEASUREMENT_ID
+  );
+  console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+
+  if (!env.G_TAG_MEASUREMENT_ID || env.NODE_ENV === "development") {
     return null;
   }
 
