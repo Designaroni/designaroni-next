@@ -11,7 +11,7 @@ const nextConfig = {
   },
   env: {
     G_TAG_MEASUREMENT_ID: process.env.G_TAG_MEASUREMENT_ID,
-    NODE_ENV: process.env.NODE_ENV,
+    ENV: process.env.NODE_ENV,
   },
 };
 

@@ -10,7 +10,6 @@ import FontFaceObserver from "fontfaceobserver";
 import Layout from "@/components/layout";
 import { LoadingScreen } from "@/components/loading";
 import "@/styles/globals.scss";
-import { env } from "process";
 
 export interface CustomAppProps extends AppProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -19,15 +18,13 @@ export interface CustomAppProps extends AppProps {
 }
 
 const GlobalGoogleAnalytics = () => {
-  console.log("env.G_TAG_MEASUREMENT_ID", env.G_TAG_MEASUREMENT_ID);
-  console.log("env.NODE_ENV", env.NODE_ENV);
   console.log(
     "process.env.G_TAG_MEASUREMENT_ID",
     process.env.G_TAG_MEASUREMENT_ID
   );
-  console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+  console.log("process.env.ENV", process.env.ENV);
 
-  if (!env.G_TAG_MEASUREMENT_ID || env.NODE_ENV === "development") {
+  if (!process.env.G_TAG_MEASUREMENT_ID || process.env.ENV === "development") {
     return null;
   }
 
@@ -35,7 +32,7 @@ const GlobalGoogleAnalytics = () => {
     <>
       {/* Google tag (gtag.js) */}
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${env.G_TAG_MEASUREMENT_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.G_TAG_MEASUREMENT_ID}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -44,7 +41,7 @@ const GlobalGoogleAnalytics = () => {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
           
-          gtag('config', '${env.G_TAG_MEASUREMENT_ID}');
+          gtag('config', '${process.env.G_TAG_MEASUREMENT_ID}');
           `}
       </Script>
     </>
