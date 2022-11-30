@@ -10,7 +10,6 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
   },
   env: {
-    G_TAG_MEASUREMENT_ID: process.env.G_TAG_MEASUREMENT_ID,
     ENV: process.env.NODE_ENV,
   },
 };

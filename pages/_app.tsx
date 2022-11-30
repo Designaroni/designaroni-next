@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import Script from "next/script";
 import { FooterData, TopLevelPageNames } from "@/lib/api";
 import { getPageType } from "@/lib/helper-methods";
@@ -18,13 +17,10 @@ export interface CustomAppProps extends AppProps {
 }
 
 const GlobalGoogleAnalytics = () => {
-  console.log(
-    "process.env.G_TAG_MEASUREMENT_ID",
-    process.env.G_TAG_MEASUREMENT_ID
-  );
-  console.log("process.env.ENV", process.env.ENV);
-
-  if (!process.env.G_TAG_MEASUREMENT_ID || process.env.ENV === "development") {
+  if (
+    !process.env.NEXT_PUBLIC_G_TAG_MEASUREMENT_ID ||
+    process.env.ENV === "development"
+  ) {
     return null;
   }
 
@@ -32,7 +28,7 @@ const GlobalGoogleAnalytics = () => {
     <>
       {/* Google tag (gtag.js) */}
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.G_TAG_MEASUREMENT_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_G_TAG_MEASUREMENT_ID}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -41,7 +37,7 @@ const GlobalGoogleAnalytics = () => {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
           
-          gtag('config', '${process.env.G_TAG_MEASUREMENT_ID}');
+          gtag('config', '${process.env.NEXT_PUBLIC_G_TAG_MEASUREMENT_ID}');
           `}
       </Script>
     </>
