@@ -1,4 +1,3 @@
-import Script from "next/script";
 import { FooterData, TopLevelPageNames } from "@/lib/api";
 import { getPageType } from "@/lib/helper-methods";
 import { useEffect, useState } from "react";
@@ -8,6 +7,7 @@ import { useRouter } from "next/router";
 import FontFaceObserver from "fontfaceobserver";
 import Layout from "@/components/layout";
 import { LoadingScreen } from "@/components/loading";
+import GoogleAnalytics from "@/components/seo/analytics/googleanalytics";
 import "@/styles/globals.scss";
 
 export interface CustomAppProps extends AppProps {
@@ -15,34 +15,6 @@ export interface CustomAppProps extends AppProps {
   Component: NextComponentType<NextPageContext, any, any>;
   pageProps: { footerData: FooterData; topLevelPageNames: TopLevelPageNames };
 }
-
-const GlobalGoogleAnalytics = () => {
-  if (
-    !process.env.NEXT_PUBLIC_G_TAG_MEASUREMENT_ID ||
-    process.env.ENV === "development"
-  ) {
-    return null;
-  }
-
-  return (
-    <>
-      {/* Google tag (gtag.js) */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_G_TAG_MEASUREMENT_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-          
-          gtag('config', '${process.env.NEXT_PUBLIC_G_TAG_MEASUREMENT_ID}');
-          `}
-      </Script>
-    </>
-  );
-};
 
 const MyApp = ({ Component, pageProps }: CustomAppProps) => {
   const router = useRouter();
@@ -92,7 +64,7 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
   if (!fontsLoaded || !routeLoaded)
     return (
       <>
-        <GlobalGoogleAnalytics />
+        <GoogleAnalytics />
         <LoadingScreen
         // loadingMessage={[
         //   "Route planning...",
@@ -107,14 +79,14 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
   if (!topLevelPageNames)
     return (
       <>
-        <GlobalGoogleAnalytics />
+        <GoogleAnalytics />
         <LoadingScreen loadingMessage="Looks like we're still hibernating, check back later" />
       </>
     );
 
   return (
     <>
-      <GlobalGoogleAnalytics />
+      <GoogleAnalytics />
       <Layout
         footerData={footerData}
         pageType={pageType}
