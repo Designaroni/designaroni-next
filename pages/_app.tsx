@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import FontFaceObserver from "fontfaceobserver";
 import Layout from "@/components/layout";
 import { LoadingScreen } from "@/components/loading";
+import GoogleAnalytics from "@/components/seo/analytics/googleanalytics";
 import "@/styles/globals.scss";
 
 export interface CustomAppProps extends AppProps {
@@ -62,29 +63,38 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
 
   if (!fontsLoaded || !routeLoaded)
     return (
-      <LoadingScreen
-      // loadingMessage={[
-      //   "Route planning...",
-      //   "Foraging mushrooms...",
-      //   "Scrambling data...",
-      // ]}
-      // loadingMessage="Waiting for snow to fall..."
-      />
+      <>
+        <GoogleAnalytics />
+        <LoadingScreen
+        // loadingMessage={[
+        //   "Route planning...",
+        //   "Foraging mushrooms...",
+        //   "Scrambling data...",
+        // ]}
+        // loadingMessage="Waiting for snow to fall..."
+        />
+      </>
     );
 
   if (!topLevelPageNames)
     return (
-      <LoadingScreen loadingMessage="Looks like we're still hibernating, check back later" />
+      <>
+        <GoogleAnalytics />
+        <LoadingScreen loadingMessage="Looks like we're still hibernating, check back later" />
+      </>
     );
 
   return (
-    <Layout
-      footerData={footerData}
-      pageType={pageType}
-      topLevelPageNames={topLevelPageNames}
-    >
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <GoogleAnalytics />
+      <Layout
+        footerData={footerData}
+        pageType={pageType}
+        topLevelPageNames={topLevelPageNames}
+      >
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 };
 
