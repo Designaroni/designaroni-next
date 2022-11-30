@@ -9,6 +9,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  G_TAG_MEASUREMENT_ID: process.env.G_TAG_MEASUREMENT_ID,
 };
 
 module.exports = nextConfig;

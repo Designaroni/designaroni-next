@@ -80,6 +80,11 @@ export const parseDate = (
 const fallbackImage = `https://api.designaroni.com/uploads/designaroni_fallback_image_497eb3437d.jpg?updated_at=2022-05-12T15:06:08.538Z`;
 const fallbackFetchURL = `https://api.designaroni.com`;
 
+console.log(
+  "process.env.NEXT_PUBLIC_STRAPI_API_URL",
+  process.env.NEXT_PUBLIC_STRAPI_API_URL
+);
+
 export const fetchBaseURL = () =>
   process.env.NEXT_PUBLIC_STRAPI_API_URL
     ? process.env.NEXT_PUBLIC_STRAPI_API_URL
