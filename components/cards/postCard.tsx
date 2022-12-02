@@ -4,7 +4,6 @@ import { ArrowRight } from "phosphor-react";
 import Title from "@/components/title/title";
 import {
   hexToRGBNumbers,
-  imageURL,
   lowercaseStringAsURL,
   rgbDataURL,
 } from "@/lib/helper-methods";
