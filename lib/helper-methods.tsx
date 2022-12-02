@@ -77,7 +77,7 @@ export const parseDate = (
   });
 };
 
-const fallbackImage = `https://api.designaroni.com/uploads/designaroni_fallback_image_497eb3437d.jpg?updated_at=2022-05-12T15:06:08.538Z`;
+// const fallbackImage = `https://api.designaroni.com/uploads/designaroni_fallback_image_497eb3437d.jpg?updated_at=2022-05-12T15:06:08.538Z`;
 const fallbackFetchURL = `https://api.designaroni.com`;
 
 export const fetchBaseURL = () =>
@@ -85,10 +85,10 @@ export const fetchBaseURL = () =>
     ? process.env.NEXT_PUBLIC_STRAPI_API_URL
     : fallbackFetchURL;
 
-export const imageURL = (path: string) =>
-  process.env.NEXT_PUBLIC_STRAPI_API_URL
-    ? process.env.NEXT_PUBLIC_STRAPI_API_URL + path
-    : fallbackImage;
+// export const imageURL = (path: string) =>
+//   process.env.NEXT_PUBLIC_IMAGES_DOMAIN
+//     ? process.env.NEXT_PUBLIC_IMAGES_DOMAIN + path
+//     : fallbackImage;
 
 export const lowercaseStringAsURL = (string: string) =>
   `/${string.replace(/[\W_]+/g, "-").toLowerCase()}`;

@@ -1,5 +1,5 @@
 import { TopLevelPageData } from "@/lib/api";
-import { imageURL, lowercaseStringAsURL } from "@/lib/helper-methods";
+import { lowercaseStringAsURL } from "@/lib/helper-methods";
 import Link from "next/link";
 import FutureImage from "next/future/image";
 import Section from "@/components/section/section";
@@ -45,7 +45,7 @@ const FeaturedPages = ({ topLevelPageData }: FeaturedPages) => (
                 alt={topLevelPage.heroImage.alternativeText}
                 className={styles[imageClassName]}
                 height={topLevelPage.heroImage.height}
-                src={imageURL(topLevelPage.heroImage.url)}
+                src={topLevelPage.heroImage.url}
                 width={topLevelPage.heroImage.width}
               />
             </MotionFadeAndSlideInWhenInView>
