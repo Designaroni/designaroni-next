@@ -4,7 +4,6 @@ import { ArrowRight } from "phosphor-react";
 import Title from "@/components/title/title";
 import {
   hexToRGBNumbers,
-  imageURL,
   lowercaseStringAsURL,
   rgbDataURL,
 } from "@/lib/helper-methods";
@@ -71,7 +70,7 @@ const PostCard = ({
           blurDataURL={rgbDataURL(hexToRGBNumbers(variables.highCountry))}
           height={coverImage.height}
           placeholder="blur"
-          src={imageURL(coverImage.url)}
+          src={coverImage.url}
           width={coverImage.width}
         />
       </a>
@@ -126,7 +125,7 @@ const PostCard = ({
                     )}
                     className={styles.authorImage}
                     height={36}
-                    src={imageURL(author.profileImage.url)}
+                    src={author.profileImage.url}
                     width={36}
                   />
                 </a>

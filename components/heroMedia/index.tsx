@@ -1,5 +1,5 @@
 import FutureImage from "next/future/image";
-import { hexToRGBNumbers, imageURL, rgbDataURL } from "@/lib/helper-methods";
+import { hexToRGBNumbers, rgbDataURL } from "@/lib/helper-methods";
 import MotionFadeInWhenInView from "@/components/motionFadeInWhenInView/motionFadeInWhenInView";
 import Section from "@/components/section/section";
 import Title from "@/components/title/title";
@@ -88,7 +88,7 @@ const HeroMediaSection = ({
             className={styles[imageClassName]}
             height={heroMediaHeight}
             placeholder="blur"
-            src={imageURL(heroMediaURL)}
+            src={heroMediaURL}
             width={heroMediaWidth}
           />
         </MotionFadeInWhenInView>

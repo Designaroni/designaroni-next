@@ -14,11 +14,7 @@ import {
   PageMetaData,
   TopLevelPageNames,
 } from "@/lib/api";
-import {
-  lowercaseStringAsURL,
-  imageURL,
-  capitalize,
-} from "@/lib/helper-methods";
+import { lowercaseStringAsURL, capitalize } from "@/lib/helper-methods";
 import PageHead from "@/components/general/pageHead";
 import Section from "@/components/section/section";
 import Row from "@/components/row/row";
@@ -116,7 +112,7 @@ const Post: NextPage<PageProps> = (pageProps) => {
               alt={profileImage.alternativeText}
               className={styles.profileImage}
               height={profileImage.height}
-              src={imageURL(profileImage.url)}
+              src={profileImage.url}
               width={profileImage.width}
             />
             <Markdown className={styles.bio}>{author.bio}</Markdown>

@@ -3,7 +3,7 @@
 - Copy `env.example` to `.env.local`
 - For local development update vars to localhost Strapi backend configuration
   `NEXT_PUBLIC_STRAPI_API_URL=http://localhost:1337`
-  `NEXT_CONFIG_IMAGES_DOMAIN=localhost`
+  `NEXT_PUBLIC_IMAGES_DOMAIN=localhost`
 
 - for test and production environment connections use the env vars hosted on Vercel
 
