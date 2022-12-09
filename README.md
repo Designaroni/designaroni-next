@@ -1,11 +1,13 @@
 ### Environment Variables
 
 - Copy `env.example` to `.env.local`
-- For local development update vars to localhost Strapi backend configuration
-  `NEXT_PUBLIC_STRAPI_API_URL=http://localhost:1337`
-  `NEXT_PUBLIC_IMAGES_DOMAIN=localhost`
+- For local development update vars to match localhost Strapi backend configuration
+  `HOSTNAME=localhost`
+  `NEXT_PUBLIC_STRAPI_API_URL=http://$HOSTNAME:1337`
+  `NEXT_PUBLIC_IMAGES_DOMAIN=$HOSTNAME`
+  `NEXT_PUBLIC_G_TAG_MEASUREMENT_ID=LOCALHOST`
 
-- for test and production environment connections use the env vars hosted on Vercel
+- for test and production environment connections setup similar values for `Production`, `Preview` and `Preview on test` env vars hosted on Vercel.
 
 ---
 
