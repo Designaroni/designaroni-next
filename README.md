@@ -38,7 +38,7 @@ Internally runs `$ next lint` to lint the project using Next linting configurati
 
 Internally runs `$ yarn stylelint '**/*.scss'` for linting based on the projects stylelint configuration
 
-### lint:ts`
+### `lint:ts`
 
 Internally runs `tsc --noEmit` to invoke the TypeScript compiler, linting based on the `tsconfig.json` configuration.
 
