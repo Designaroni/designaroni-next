@@ -1,4 +1,4 @@
-### Environment Variables
+# Environment Variables
 
 - Copy `env.example` to `.env.local`
 - For local development update vars to match localhost Strapi backend configuration
@@ -7,13 +7,65 @@
   `NEXT_PUBLIC_IMAGES_DOMAIN=$HOSTNAME`
   `NEXT_PUBLIC_G_TAG_MEASUREMENT_ID=LOCALHOST`
 
-- for test and production environment connections setup similar values for `Production`, `Preview` and `Preview on test` env vars hosted on Vercel.
+## `Test` & `Production` environment specifics
+
+- For both `test` and `production` environments on Vercel you will need to setup `Production`, `Preview` (and optionally if you are using a custom preview domain for your test branch `Preview on test`), environment variables hosted on Vercel.
+  - As an example I am only currently using the following:
+    - ```
+      NEXT_PUBLIC_STRAPI_API_URL
+      NEXT_PUBLIC_IMAGES_DOMAIN
+      NEXT_PUBLIC_G_TAG_MEASUREMENT_ID
+      ```
+  - This project uses a Strapi headless cms backend hosted on Digital Ocean & AWS that serves a Graphql API to the frontend. As currently deployed the values for `NEXT_PUBLIC_STRAPI_API_URL` & `NEXT_PUBLIC_IMAGES_DOMAIN` relate specifically to the Strap `test` & `production` app URLs
 
 ---
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Custom `yarn` commands for this project
 
-## Getting Started
+### `local`
+
+Same command as `dev` used for local development to start and run the Next application. Used in parity with the local development command used to start [designaroni-strapi](https://github.com/Designaroni/designaroni-strapi)
+
+### `lint`
+
+Internally runs `$ yarn lint:ts; yarn lint:js; yarn lint:scss`
+
+### `lint:js`
+
+Internally runs `$ next lint` to lint the project using Next linting configuration.
+
+### `lint:scss`
+
+Internally runs `$ yarn stylelint '**/*.scss'` for linting based on the projects stylelint configuration
+
+### lint:ts`
+
+Internally runs `tsc --noEmit` to invoke the TypeScript compiler, linting based on the `tsconfig.json` configuration.
+
+---
+
+# Getting Started
+
+- Follow the steps over on the [designaroni-strapi](https://github.com/Designaroni/designaroni-strapi) **README** to configure the local apps content & API
+  - Start the local development version of Strapi with `yarn local`.
+- Within this Next app, run `yarn local` to start the frontend application.
+
+---
+
+# Coding style guide (WIP)
+
+## SCSS & CSS Modules
+
+### Overriding component utility classes in specialized components
+
+- At times it is useful to override classes used in utility/layout components the following method can be used:
+  - `[class^="section"].aboutSection { /* ... */ }`
+
+---
+
+# 🚀 Getting started with NextJs
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
@@ -45,12 +97,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Coding style guide
-
-### SCSS & CSS Modules
-
-##### Overriding component utility classes in specialized components
-
-- At times it is useful to override classes used in utility/layout components the following method can be used:
-  - `[class^="section"].aboutSection { /* ... */ }`
