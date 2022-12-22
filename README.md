@@ -1,3 +1,25 @@
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=Designaroni_designaroni-next)
+
+[![GraphQL](https://badgen.net/badge/icon/graphql?icon=graphql&label)](https://graphql.org/)
+
+[![Jira](https://badgen.net/badge/icon/jira?icon=jira&label)](https://designaroni.atlassian.net/jira/software/projects/DN/boards/1)
+
+[![Designaroni Next Github](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/designaroni/designaroni-next)
+
+[![Dependabot](https://badgen.net/badge/icon/dependabot?icon=dependabot&label)](https://github.com/Designaroni/designaroni-next/security/dependabot)
+
+[![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://www.typescriptlang.org/)
+
+[![Vercel Designaroni-next](https://badgen.net/badge/icon/vercel?icon=vercel&label)](https://vercel.com/designaroni/designaroni-next)
+
+[![Git SCM](https://badgen.net/badge/icon/git?icon=git&label)](https://git-scm.com/)
+
+![Terminal](https://badgen.net/badge/icon/terminal?icon=terminal&label)
+
+![MIT License](https://badgen.net/badge/license/MIT/blue)
+
+<!-- https://badgen.net/badge/icon/npm?icon=npm&label -->
+
 # Environment Variables
 
 - Copy `env.example` to `.env.local`
