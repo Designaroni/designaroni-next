@@ -8,6 +8,7 @@ import FontFaceObserver from "fontfaceobserver";
 import Layout from "@/components/layout";
 import { LoadingScreen } from "@/components/loading";
 import GoogleAnalytics from "@/components/seo/analytics/googleanalytics";
+import { Analytics } from "@vercel/analytics/react";
 import "@/styles/globals.scss";
 
 export interface CustomAppProps extends AppProps {
@@ -73,6 +74,7 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
         // ]}
         // loadingMessage="Waiting for snow to fall..."
         />
+        <Analytics />
       </>
     );
 
@@ -81,6 +83,7 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
       <>
         <GoogleAnalytics />
         <LoadingScreen loadingMessage="Looks like we're still hibernating, check back later" />
+        <Analytics />
       </>
     );
 
@@ -93,6 +96,7 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
         topLevelPageNames={topLevelPageNames}
       >
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </>
   );
