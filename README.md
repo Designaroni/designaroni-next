@@ -1,3 +1,27 @@
+[![Next JS](https://badgen.net/badge/NextJs/v.12.2.5/blue)](https://nextjs.org/)
+[![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://www.typescriptlang.org/)
+[![GraphQL](https://badgen.net/badge/icon/graphql?icon=graphql&label)](https://graphql.org/)
+[![Framer Motion](https://badgen.net/badge/Framer%20Motion/v6.5.1/blue)](https://www.framer.com/motion/)
+[![Phosphor Icons](https://badgen.net/badge/Phosphor%20Icons/v1.4.1/blue)](https://phosphoricons.com/)
+[![SASS](https://badgen.net/badge/SASS/v1.5.1/blue)](https://sass-lang.com/)
+[![CSS Modules](https://badgen.net/badge/css/CSS%20Modules/blue)](https://github.com/css-modules/css-modules)
+[![Prettier](https://badgen.net/badge/Prettier/v2.6.2/blue)](https://prettier.io/)
+[![ESLint](https://badgen.net/badge/ESLint/v8.2.0/blue)](https://eslint.org/)
+[![Stylelint](https://badgen.net/badge/stylelint/v14.8.2/blue)](https://stylelint.io/)
+[![Vercel Designaroni-next](https://badgen.net/badge/icon/vercel?icon=vercel&label)](https://vercel.com/designaroni/designaroni-next)
+[![Jira](https://badgen.net/badge/icon/jira?icon=jira&label)](https://designaroni.atlassian.net/jira/software/projects/DN/boards/1)
+[![Designaroni Next Github](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/designaroni/designaroni-next)
+[![Dependabot](https://badgen.net/badge/icon/dependabot?icon=dependabot&label)](https://github.com/Designaroni/designaroni-next/security/dependabot)
+[![Git SCM](https://badgen.net/badge/icon/git?icon=git&label)](https://git-scm.com/)
+![Terminal](https://badgen.net/badge/icon/terminal?icon=terminal&label)
+![MIT License](https://badgen.net/badge/license/MIT/blue)
+
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=Designaroni_designaroni-next)
+
+<!-- https://badgen.net/badge/icon/npm?icon=npm&label -->
+
+---
+
 # Environment Variables
 
 - Copy `env.example` to `.env.local`
