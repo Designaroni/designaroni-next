@@ -34,8 +34,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-# commitlint
-commitlint.config.js
-
 # custom
 .pages_api
