@@ -16,6 +16,7 @@
     "@octokit/core": "^4.0.5",
     "@types/fontfaceobserver": "^2.1.0",
     "@types/markdown-to-jsx": "^7.0.1",
+    "@vercel/analytics": "^0.1.6",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
     "fontfaceobserver": "^2.3.0",
