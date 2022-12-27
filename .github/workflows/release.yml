@@ -1,5 +1,7 @@
 ###
 # Run semantic-release only after all tests succeeded!
+# - uses permissive GITHUB_TOKEN if we need to restrict the token in the future set permissions mannually
+# - in a future step we'll deploy this project to npm
 ###
 
 name: Release
