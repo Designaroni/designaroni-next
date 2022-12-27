@@ -18,7 +18,7 @@
 
 ## How to recreate & verify
 
-[//]: # "Nuerotically list steps needed to recreate the issue. Seperately list steps to verify the fix or verify that all require changes satisfy the ticket requirements."
+[//]: # "Neurotically list steps needed to recreate the issue. Separately list steps to verify the fix or verify that all require changes satisfy the ticket requirements."
 
 **Steps to recreate:**
 
