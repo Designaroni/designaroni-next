@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/designaroni/designaroni-next.git"
   },
-  "private": false,
+  "private": true,
   "scripts": {
     "local": "yarn dev",
     "dev": "next dev",
