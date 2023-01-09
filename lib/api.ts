@@ -668,7 +668,7 @@ export async function getTopLevelPageData() {
   const data = await fetchAPI<FetchJSON["data"]>(
     `
     query TopLevelPages {
-      topLevelPages(filters: { name: { notContains: "About" } }) {
+      topLevelPages(filters: { name: { notContains: "About" } }, sort: "id:asc") {
         data {
           attributes {
             heroImage {
