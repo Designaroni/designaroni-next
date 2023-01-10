@@ -577,7 +577,7 @@ export async function getTopLevelPageNames() {
   const data = await fetchAPI<FetchJSON["data"]>(
     `
     query TopLevelPages {
-      topLevelPages {
+      topLevelPages(sort: "id:asc") {
         data {
           attributes {
             name
