@@ -1,0 +1,35 @@
+{
+  "branches": [
+    "master",
+    {
+      "name": "next",
+      "prelease": true
+    },
+    {
+      "name": "test",
+      "prelease": true
+    }
+  ],
+  "verifyConditions": [
+    "@semantic-release/git",
+    "@semantic-release/github"
+  ],
+  "prepare": [
+    {
+      "path": "@semantic-release/git",
+      "assets": [
+        "package.json"
+      ],
+      "message": "build(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    }
+  ],
+  "publish": [
+    "@semantic-release/github"
+  ],
+  "success": [
+    "@semantic-release/github"
+  ],
+  "fail": [
+    "@semantic-release/github"
+  ]
+}

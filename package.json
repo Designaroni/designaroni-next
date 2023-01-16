@@ -1,6 +1,15 @@
 {
   "name": "designaroni-next",
+  "description": "A NextJS Frontend Application",
+  "author": {
+    "name": "Ian Roberts"
+  },
+  "license": "MIT",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designaroni/designaroni-next.git"
+  },
   "private": true,
   "scripts": {
     "local": "yarn dev",
@@ -39,6 +48,7 @@
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
     "@commitlint/cz-commitlint": "^17.3.0",
+    "@semantic-release/git": "^10.0.1",
     "@types/node": "17.0.23",
     "@types/react": "18.0.0",
     "@types/react-dom": "18.0.0",
@@ -54,6 +64,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^8.0.2",
     "prettier": "2.6.2",
+    "semantic-release": "^19.0.5",
     "stylelint-config-css-modules": "^4.1.0",
     "typescript": "4.6.3"
   }

@@ -1,0 +1,43 @@
+###
+# Run semantic-release only after all tests succeeded!
+# - uses permissive GITHUB_TOKEN if we need to restrict the token in the future set permissions mannually
+# - in a future step we'll deploy this project to npm
+###
+
+name: Release
+on:
+  push:
+    branches:
+      - master
+      - next
+      - test
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    # permissions:
+    #   content: write
+    #   issues: write
+    #   pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.9.0
+      - name: Install dependencies
+        run: yarn install
+      - name: Lint project
+        run: yarn lint
+      # - name: Test project
+      #   run: yarn test
+      # - name: Build project
+      #   run: yarn build
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
